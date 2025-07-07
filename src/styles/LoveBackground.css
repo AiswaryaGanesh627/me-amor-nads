@@ -1,0 +1,38 @@
+/* Love-themed background */
+.heart-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    #ffe6f2 0%, 
+    #ffd1dc 25%, 
+    #ffb6c1 50%, 
+    #ff9aac 75%, 
+    #ff85a1 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure content is above the background */
+.app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}

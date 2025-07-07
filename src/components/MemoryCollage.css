@@ -1,0 +1,392 @@
+.memory-collage {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  padding: 1.5rem 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  overflow-x: hidden;
+  perspective: 1000px;
+  box-sizing: border-box;
+}
+
+.memory-collage.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.memory-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.collage-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  width: 92%;
+  max-width: 1600px;
+  padding: 10px 0 30px;
+  margin: 0 auto;
+  perspective: 1000px;
+  justify-items: center;
+  align-items: start;
+  min-height: 30vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.collage-item {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
+  margin: 5px 0;
+  break-inside: avoid;
+  padding: 10px;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 350px;
+}
+
+.polaroid {
+  background: white;
+  padding: 1rem 1rem 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  max-width: 300px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collage-img, .collage-video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 2px;
+}
+
+.memory-collage.active .collage-item {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Clickable styles */
+.collage-item.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collage-item.clickable:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.collage-item.clickable:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Video item specific */
+.video-item {
+  grid-column: 1 / -1;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  transform: none !important;
+}
+
+/* Video specific styles */
+.video-item {
+  width: 60% !important;
+  max-width: 500px;
+  z-index: 10 !important;
+  transform: rotate(0deg) !important;
+  left: 50% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.video-item .polaroid {
+  animation: none !important;
+  transform: none !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+/* Birthday Page Styles */
+.birthday-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1.1rem; /* Restoring original font size */
+  line-height: 1.8; /* Restoring original line height */
+}
+
+/* Confession Page Styles */
+.birthday-content.confession {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.birthday-message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.birthday-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 16/9;
+}
+
+.birthday-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f5f5f5;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.birthday-video:hover {
+  transform: scale(1.02);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.birthday-video-container:hover .play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+.birthday-message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 30px 0;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.signature {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #ff6b6b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Birthday image positioning */
+.birthday-image-1 {
+  grid-column: 2 / 5;
+  grid-row: 2 / 6;
+}
+
+.birthday-image-2 {
+  grid-column: 9 / 12;
+  grid-row: 2 / 6;
+}
+
+.birthday-image-3 {
+  grid-column: 5 / 9;
+  grid-row: 7 / 11;
+}
+
+.memory-content {
+  max-width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 5;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .memory-title {
+    font-size: 2rem;
+  }
+  
+  .collage-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .collage-item {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .video-item {
+    width: 100% !important;
+  }
+  
+  .birthday-video-container {
+    max-width: 100%;
+  }
+  
+  .birthday-message {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+  
+  .signature {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .collage-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 30px;
+    padding: 10px;
+  }
+  
+  .collage-item {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin: 10px 0;
+    transform: none !important;
+  }
+  
+  .video-item {
+    min-height: 250px !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+  
+  .birthday-image-1,
+  .birthday-image-2,
+  .birthday-image-3 {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .memory-title {
+    font-size: 2.2rem;
+  }
+  
+  .collage-container {
+    min-height: 70vh;
+  }
+  
+  .item-1, .item-2, .item-3 {
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: rotate(0deg) !important;
+  }
+  
+  .memory-content {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animation for the polaroid effect */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(var(--rotation, -2deg)); }
+  50% { transform: translateY(-15px) rotate(calc(var(--rotation, -2deg) - 1deg)); }
+  100% { transform: translateY(0px) rotate(var(--rotation, -2deg)); }
+}
+
+.polaroid {
+  animation: float 8s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10 !important;
+}
+
+.item-1 .polaroid {
+  --rotation: -8deg;
+  animation-delay: 0s;
+}
+
+.item-2 .polaroid {
+  --rotation: 5deg;
+  animation-delay: 0.3s;
+  animation-duration: 7s;
+}
+
+.item-3 .polaroid {
+  --rotation: -3deg;
+  animation-delay: 0.6s;
+  animation-duration: 8s;
+}
+
+.item-4 .polaroid {
+  --rotation: 7deg;
+  animation-delay: 0.9s;
+  animation-duration: 9s;
+}
+
+.item-5 .polaroid {
+  --rotation: -5deg;
+  animation-delay: 1.2s;
+  animation-duration: 7.5s;
+}
