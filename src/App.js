@@ -3,6 +3,67 @@ import './App.css';
 import './styles/LoveBackground.css';
 import MemoryCollage from './components/MemoryCollage';
 
+// Custom Video Component with Poster Image
+const VideoWithPoster = ({ videoSrc, posterSrc, title }) => {
+  const [showVideo, setShowVideo] = useState(false);
+  
+  const handleClick = () => {
+    setShowVideo(true);
+  };
+  
+  // Extract video ID from Google Drive URL if it's a Google Drive link
+  const getEmbedUrl = (url) => {
+    if (url.includes('drive.google.com')) {
+      // For Google Drive links
+      const fileId = url.match(/\/d\/([^/]+)/)?.[1] || url.match(/id=([^&]+)/)?.[1];
+      if (fileId) {
+        return `https://drive.google.com/file/d/${fileId}/preview`;
+      }
+    }
+    return url;
+  };
+  
+  return (
+    <div className="birthday-video-container">
+      {!showVideo ? (
+        <div 
+          className="video-poster-container" 
+          onClick={handleClick}
+          style={{ cursor: 'pointer' }}
+        >
+          <img 
+            src={posterSrc} 
+            alt={title} 
+            className="video-poster" 
+          />
+          <div className="play-icon" style={{ 
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: '4rem',
+            opacity: 0.9,
+            color: 'white',
+            textShadow: '0 2px 10px rgba(0, 0, 0, 0.7)',
+            zIndex: 2
+          }}>▶️</div>
+        </div>
+      ) : (
+        <iframe
+          className="birthday-video"
+          src={getEmbedUrl(videoSrc)}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title={title}
+        ></iframe>
+      )}
+    </div>
+  );
+};
+
 const memories = [
   {
     id: 'welcome',
@@ -43,7 +104,7 @@ const memories = [
         <>
           <p>Feb 29, 2024❤️Ennoda life changing day. Ne enaku anaki text pannala apdina life la na ennoda most important person ah miss pannirpen pa. Thank you for coming into my life pa😘</p>
           <p>Apo text panna start pannom. Neraya pesnom. Pesikite irundhom. Un texts ku naduvula unnoda genuine aana character ayum ponnungalku ne kudutha respect ayum enaku na naana iruka ne kudutha space ayum paathu enaku un mela periya maryadha vandhiduchu.</p>
-          <p>Andha maryadha enaku un mela love ah paasam ah maarichu. Unna na nerla paakala un mukham kooda perusa enaku nyaabagam illa. Unnoda habits and manners enaku theriyathu. Una pathi na full ah therinjukaamaye unna na love pana start panniten.</p>
+          <p>Andha maryadha enaku un mela love ah paasam ah maarichu. Unna na nerla paakala un mukham kooda perusa enaku nyaabagam illa. Unnoda habits and manners enaku theriyama. Una pathi na full ah therinjukaamaye unna na love pana start panniten.</p>
           <p>Un messages kaaga wait pana start pannen. Unaku good night sollama enaku thookam varathu. Gradually, you became a part of my life. You became a part of me paa❤️</p>
         </>
     ),
@@ -314,21 +375,27 @@ const memories = [
     title: '🎂 Happy Birthday, Paaa!',
     content: (
       <div className="birthday-content">
-        <p>Happy birthday, Paaa!❤️ I am glad you were born. Thank you for coming into my life. Life la unnoda ella birthdays kum un kooda naa irukanum nu aasa padren pa.</p>
+        <p>Happy birthday, Paaa!❤️ I am glad you were born. Thank you for coming into my life. Life la unnoda ella birthdays kum un kooda naanum irukanum nu aasa padren pa.</p>
         <p>Ti amo🌹</p>
         
         <div className="birthday-video-container">
           <video 
             className="birthday-video"
             controls
-            onPlay={(e) => e.target.nextElementSibling.style.display = 'none'}
-            onPause={(e) => e.target.nextElementSibling.style.display = 'block'}
+            onPlay={(e) => {
+              const playIcon = e.target.nextElementSibling;
+              if (playIcon) playIcon.style.display = 'none';
+            }}
+            onPause={(e) => {
+              const playIcon = e.target.nextElementSibling;
+              if (playIcon) playIcon.style.display = 'block';
+            }}
             poster="/images/poster-2.jpeg"
           >
             <source src="/images/birthday-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="play-icon">▶️</div>
+          <div className="play-icon" style={{ display: 'block', opacity: 0.9 }}>▶️</div>
         </div>
         
         <p className="birthday-message">
@@ -347,19 +414,11 @@ const memories = [
           <p>Una na love panren pa... Rombaaa... Enaku evlo valichalum evlo insecurities and self-doubts irundhalum na una mela vechiruka kadhal ellatha vidayum strong aanathu.</p>
           <p>Ennala epovume un mela love ah thavara ethayume kaata mudiyathu pa. I am in love with you. I keep falling more and more every single day❤️</p>
 
-          <div className="birthday-video-container">
-            <video
-                className="birthday-video"
-                controls
-                onPlay={(e) => e.target.nextElementSibling.style.display = 'none'}
-                onPause={(e) => e.target.nextElementSibling.style.display = 'block'}
-                poster="/images/poster-1.jpeg"
-            >
-              <source src="/images/confession-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="play-icon">▶️</div>
-          </div>
+          <VideoWithPoster 
+            videoSrc="https://drive.google.com/uc?id=1wjV_zm-YSrb8Mxbm0N_9koSNvv8o5meI&export=download" 
+            posterSrc="/images/poster-1.jpeg" 
+            title="Confession video"
+          />
 
           <p className="birthday-message">
             Ennoda Best friend, enaku doubts varapo ennoda mentor ah, na vizharapo ena thangi pudikra soulmate ah,
