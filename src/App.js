@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import './styles/LoveBackground.css';
 import MemoryCollage from './components/MemoryCollage';
@@ -440,30 +440,30 @@ function App() {
     };
   }, []);
 
-  const nextMemory = () => {
+  const nextMemory = useCallback(() => {
     if (currentMemory < memories.length - 1 && !isTransitioning) {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentMemory(currentMemory + 1);
+        setCurrentMemory(prev => prev + 1);
         setIsTransitioning(false);
       }, 500);
     }
-  };
+  }, [currentMemory, isTransitioning]);
 
-  const prevMemory = () => {
+  const prevMemory = useCallback(() => {
     if (currentMemory > 0 && !isTransitioning) {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentMemory(currentMemory - 1);
+        setCurrentMemory(prev => prev - 1);
         setIsTransitioning(false);
       }, 500);
     }
-  };
+  }, [currentMemory, isTransitioning]);
 
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowRight') {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
         nextMemory();
       } else if (e.key === 'ArrowLeft') {
         prevMemory();
@@ -472,7 +472,7 @@ function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentMemory, isTransitioning]);
+  }, [currentMemory, isTransitioning, nextMemory, prevMemory]);
 
   return (
     <div className="app">
