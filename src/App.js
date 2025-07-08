@@ -374,30 +374,16 @@ const memories = [
     id: 'birthday-wish',
     title: '🎂 Happy Birthday, Paaa!',
     content: (
-      <div className="birthday-content">
+      <div className="birthday-content confession">
         <p>Happy birthday, Paaa!❤️ I am glad you were born. Thank you for coming into my life. Life la unnoda ella birthdays kum un kooda naanum irukanum nu aasa padren pa.</p>
         <p>Ti amo🌹</p>
-        
-        <div className="birthday-video-container">
-          <video 
-            className="birthday-video"
-            controls
-            onPlay={(e) => {
-              const playIcon = e.target.nextElementSibling;
-              if (playIcon) playIcon.style.display = 'none';
-            }}
-            onPause={(e) => {
-              const playIcon = e.target.nextElementSibling;
-              if (playIcon) playIcon.style.display = 'block';
-            }}
-            poster="/images/poster-2.jpeg"
-          >
-            <source src="/images/birthday-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="play-icon" style={{ display: 'block', opacity: 0.9 }}>▶️</div>
-        </div>
-        
+
+        <VideoWithPoster
+            videoSrc="https://drive.google.com/uc?id=1Xc2nIq_rqhv_TPoOPapAV68zQBTwjINW&export=download"
+            posterSrc="/images/poster-2.jpeg"
+            title="Confession video"
+        />
+
         <p className="birthday-message">
           Inda varsham unaku ella santhoshathayum kudukanum. Ne aasa padrathu ellame unaku kedaikanum💖
           <br/>Ne epovume happy ah sirichikita irukanum. Atha na un kooda irundhu paathu rasikanum.😘
@@ -416,7 +402,7 @@ const memories = [
 
           <VideoWithPoster 
             videoSrc="https://drive.google.com/uc?id=1wjV_zm-YSrb8Mxbm0N_9koSNvv8o5meI&export=download" 
-            posterSrc="/images/poster-1.jpeg" 
+            posterSrc="/images/poster-1.jpeg"
             title="Confession video"
           />
 
