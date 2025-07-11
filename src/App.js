@@ -104,7 +104,7 @@ const memories = [
         <>
           <p>Feb 29, 2024❤️Ennoda life changing day. Ne enaku anaki text pannala apdina life la na ennoda most important person ah miss pannirpen pa. Thank you for coming into my life pa😘</p>
           <p>Apo text panna start pannom. Neraya pesnom. Pesikite irundhom. Un texts ku naduvula unnoda genuine aana character ayum ponnungalku ne kudutha respect ayum enaku na naana iruka ne kudutha space ayum paathu enaku un mela periya maryadha vandhiduchu.</p>
-          <p>Andha maryadha enaku un mela love ah paasam ah maarichu. Unna na nerla paakala un mukham kooda perusa enaku nyaabagam illa. Unnoda habits and manners enaku theriyama. Una pathi na full ah therinjukaamaye unna na love pana start panniten.</p>
+          <p>Andha maryadha enaku un mela love ah paasam ah maarichu. Unna na nerla paakala un mukham kooda perusa enaku nyaabagam illa. Unnoda habits and manners enaku apo theriyathu. Una pathi na full ah therinjukaamaye unna na love pana start panniten.</p>
           <p>Un messages kaaga wait pana start pannen. Unaku good night sollama enaku thookam varathu. Gradually, you became a part of my life. You became a part of me paa❤️</p>
         </>
     ),
@@ -135,7 +135,7 @@ const memories = [
     content: (
         <>
           <p>Un life la un lifeaye maathra maari oru change vandhichu. Athuku na unnoda stepping stone ah irundhen. Unnoda career oda next phase. Athena ku ne vandha nalla irukum nu enaku epovume thonum</p>
-          <p>Naama neraya discuss panni onna decide pannom athena will be a better choice. Unnoda life-changing moment. But unaku oru theriyuma pa. That was a life-changing moment for me as well😢</p>
+          <p>Naama neraya discuss panni onna decide pannom athena will be a better choice nu. Unnoda life-changing moment. But unaku onu theriyuma pa. That was a life-changing moment for me as well😢</p>
           <p>Ne athena ku vandha aprm ennoda confusions doubts ellam maranchu na un mela vechirka kadhal evlo aazhamaanathu nu enake apo than purinjuchu</p>
           <p>Athena happened to you... You happened to me pa💓</p>
         </>
@@ -170,7 +170,7 @@ const memories = [
           <p>Una unake theriyama sight adikrathu photo edukrathu video edukrathu. Matha ponnunga una paatha avangalku warning tharathu😂Un pinnadi unake theriyama suthnen pa.</p>
           <p>Ennoda oru thalai kadhal oru nalla feeling. Unnoda happiness than enoda happiness. But neraya valiyum kuduthichu. Ne ena love pannala nu clear ah unoda actions la theriyum.</p>
           <p>But andha pain ayum thaandi enaku ne important nu thonichu pa. Ennoda top most priority ah nee maarna. Oru person kaaga ennala ivlo panna mudiyuma nu un kita than na pathen.</p>
-          <p>I love you so much❤️ But ennoda love ah full ah unaku explain panna indha workds pathathu pa</p>
+          <p>I love you so much❤️ But ennoda love ah full ah unaku explain panna indha words pathatheyy pa</p>
         </>
     ),    images: [
       {
@@ -200,7 +200,7 @@ const memories = [
         <>
           <p>Ennoda best friend ah ennoda partner ah na unna paaka start pannen. Ne illatha oru life imagine panrathe kashtama maarichu.🥲</p>
           <p>Ethu na temporary feelings nu nenacheno athu ennaye maraka vekra love ah maarichu. Unnoda happiness epo enaku ennoda happiness ah vidu perusu nu thona aarambichichu nu theriyala. But ennoda ellavuma ne maarita pa💘</p>
-          <p>Ennoda life la oru part illa ne. Enakulla oru part ah iruka. Una ivlo love pannuven nu na nenakave illa. Unnoda oru chinna siripu ennoda life ah azhaga maathum nu na nenakave ila.❤️</p>
+          <p>Ennoda life la oru part illa nee. Enakulla oru part ah iruka. Una ivlo love pannuven nu na nenakave illa. Unnoda oru chinna siripu ennoda life ah azhaga maathum nu na nenakave ila.❤️</p>
         </>
     ),    images: [
       {
@@ -229,9 +229,9 @@ const memories = [
     content: (
         <>
          <p>Unmaya sollanum na. The best days of my life😢❤️ Un kooda time spend panrathe namma office la than. Ne athena varalana na neraya enoda life la miss pannirpen.</p>
-        <p>Una pakkathila ukkandhu torture panrathu... Un laptop ah moodi una tension aakrathu😉Un specs ah pudungrathu😂 Un kaathi pudichu thirukrathu...Ne ponnunga pera solli ena verupethrathu😏</p>
-        <p>Sometimes ne tired ah irukrapo ne amaithiya irukrathu..Ithellamee enoda happy moments pa. Ne en kooda pesama amaithiya irundhalum un kooda chumma ukkarave enaku avlooo pudikum pa.</p>
-          <p>Unaku theriyum en life la work and family thavara onnum irundhathu ila. Inimey nee, family and work avlo than. In fact enaku work na kooda athulayum ne than iruka pa😂</p>
+        <p>Una pakkathila ukkandhu torture panrathu... Un laptop ah moodi una tension aakrathu😉Un specs ah pudungrathu😂 Un ears ah pudichu thirukrathu...Ne ponnunga pera solli ena verupethrathu😏</p>
+        <p>Ithellamey enoda happy moments pa.In fact nee en kooda pesama amaithiya irundhalum un kooda chumma ukkarave enaku avlooo pudikum pa.</p>
+          <p>Unaku theriyum en life la work and family thavara onnum irundhathu ila. Inimey nee, family and work avlo than. In fact work na kooda athulayum ne than iruka pa. What will I do without you in my life?😂</p>
         </>
     ),    images: [
       {
@@ -262,7 +262,7 @@ const memories = [
         <p>Unaku pidichathu lam enakum pidika aarambichuchu. Ne rasikratha paathu naa una rasika aarambichen. Ne virat kohli Ab De Villiers ah pathi pesrapo un eyes shine aagum.😂</p>
         <p>Oru remote control car ah paakrapo un kannula theriyara andha kozhandhathanamaana santhosham. Filter coffee kudikrapo...Gym poyi nalla pump kedarapo...</p>
         <p>Calorie calorie nu sollitu kunafa, waffle, dragon paneer, tender coconut juice, margherita pizza ithellam rashichu cute ah saapdrapo..saaaaami evlo azhaga iruka theriyuma satti nee😭❤️🤌</p>
-        <p>En heart en kita illa poooo...Ne unaku pudichathu pannanum.Atha un koodave irundhu unnoda happiness ah paathu na rasikanum.❤️</p>
+        <p>En heart en kita illa poooo...Ne unaku pudichathu pannanum.Un koodave irundhu unnoda happiness ah paathu na rasikanum.❤️</p>
       </>
     ),
     images: [
@@ -322,7 +322,7 @@ const memories = [
     content: (
         <>
           <p>Un life la unnoda most important people... Ne illana vaazhkaye illanu nenakra amma appa, un mela uyiraye vechiruka manickam anna, un mela paasama iruka college friends and oor pasanga❤️</p>
-          <p>Un mela affectionate ah irukra unnoda cousins, friends and relatives. Ipdi una suthi un mela paasam veka neraya per irukanga pa. Life la unaku paasam neraya iruku❣️Epovume unaku ivlo love kedaikanum</p>
+          <p>Un mela affectionate ah irukra unnoda cousins, friends and relatives. Ipdi una suthi un mela paasam veka neraya per irukanga pa. Life la unaku paasam neraya iruku❣️Epovume unaku ivlo love kedaikanum🤞</p>
           <p>Unnoda important people la na oruthi nu theriyum😂But evlo important nu theriyala. Unnoda most important person ah irukanum nu aasaya iruku pa. Irukalama?</p>
         </>
     ),    images: [
@@ -375,7 +375,7 @@ const memories = [
     title: '🎂 Happy Birthday, Paaa!',
     content: (
       <div className="birthday-content confession">
-        <p>Happy birthday, Paaa!❤️ I am glad you were born. Thank you for coming into my life. Life la unnoda ella birthdays kum un kooda naanum irukanum nu aasa padren pa.</p>
+        <p>Happy birthday, Paaa!❤️ I am glad you were born. Thank you for coming into my life. Life la unnoda ella birthdayskum un kooda naanum irukanum nu aasa padren pa.</p>
         <p>Ti amo🌹</p>
 
         <VideoWithPoster
@@ -385,8 +385,8 @@ const memories = [
         />
 
         <p className="birthday-message">
-          Inda varsham unaku ella santhoshathayum kudukanum. Ne aasa padrathu ellame unaku kedaikanum💖
-          <br/>Ne epovume happy ah sirichikita irukanum. Atha na un kooda irundhu paathu rasikanum.😘
+          Indha varsham unaku ella santhoshathayum kudukanum. Ne aasa padrathu ellame unaku kedaikanum💖
+          <br/>Ne epovume happy ah sirichikite irukanum. Atha na un kooda irundhu paathu rasikanum.😘
         </p>
       </div>
     ),
@@ -407,9 +407,9 @@ const memories = [
           />
 
           <p className="birthday-message">
-            Ennoda Best friend, enaku doubts varapo ennoda mentor ah, na vizharapo ena thangi pudikra soulmate ah,
+            Ennoda Best friend ah, enaku doubts varapo ennoda mentor ah, na vizharapo ena thangi pudikra soulmate ah,
             na sogama irukrapo ena sirika vekra ennoda happy pill ah, ennoda stress buster ah, enaku problem nu varapo atha handle panra ennoda guardian ah,
-            ennoda life ah share pannikra life partner, enoda boyfriend, ennoda husband ah, ennoda kids ku appa va ne irukanum nu aasa padren pa.
+            ennoda life ah share pannikra life partner ah, enoda boyfriend ah, ennoda husband ah, ennoda kids ku appa va nee irukanum nu aasa padren pa.
             <br/>Irupiya pa?
             <span className="signature">With lots of kadhal,<br />Aiswarya ❤️</span>
           </p>

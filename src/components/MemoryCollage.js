@@ -1,8 +1,32 @@
 import React, { useState } from 'react';
 import './MemoryCollage.css';
 
+// Lightbox component for displaying clicked images
+const Lightbox = ({ image, onClose }) => {
+  if (!image) return null;
+
+  return (
+    <div className="lightbox-overlay" onClick={onClose}>
+      <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+        <img 
+          src={image.url} 
+          alt={image.alt} 
+          className="lightbox-image"
+        />
+        {image.caption && (
+          <div className="lightbox-caption">{image.caption}</div>
+        )}
+        <button className="lightbox-close" onClick={onClose}>
+          &times;
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const MemoryCollage = ({ images, title, content, isActive, videoUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   
   if (!isActive) return null;
 
@@ -10,8 +34,19 @@ const MemoryCollage = ({ images, title, content, isActive, videoUrl }) => {
     setIsPlaying(true);
   };
 
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className={`memory-collage ${isActive ? 'active' : ''}`}>
+      {selectedImage && (
+        <Lightbox image={selectedImage} onClose={closeLightbox} />
+      )}
       <h1 className="memory-title">{title}</h1>
       
       <div className="collage-container">
@@ -46,14 +81,20 @@ const MemoryCollage = ({ images, title, content, isActive, videoUrl }) => {
                   )}
                 </div>
               ) : (
-                <img 
-                  src={img.url} 
-                  alt={img.alt} 
-                  className="collage-img"
-                  style={{
-                    transform: `rotate(${Math.random() > 0.5 ? '' : '-'}${Math.random() * 5}deg)`
-                  }}
-                />
+                <div 
+                  className="image-container"
+                  onClick={() => handleImageClick(img)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <img 
+                    src={img.url} 
+                    alt={img.alt} 
+                    className="collage-img"
+                    style={{
+                      transform: `rotate(${Math.random() > 0.5 ? '' : '-'}${Math.random() * 5}deg)`
+                    }}
+                  />
+                </div>
               )}
               {img.caption && (
                 <div className="polaroid-caption">{img.caption}</div>
