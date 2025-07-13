@@ -379,9 +379,9 @@ const memories = [
         <p>Ti amo🌹</p>
 
         <VideoWithPoster
-            videoSrc="https://drive.google.com/uc?id=1Xc2nIq_rqhv_TPoOPapAV68zQBTwjINW&export=download"
+            videoSrc="https://drive.google.com/uc?id=14glAHM-89RZawqH5IvCPlE7YzdQP3GvS&export=download"
             posterSrc="/images/poster-2.jpeg"
-            title="Confession video"
+            title="Birthday video"
         />
 
         <p className="birthday-message">
@@ -401,7 +401,7 @@ const memories = [
           <p>Ennala epovume un mela love ah thavara ethayume kaata mudiyathu pa. I am in love with you. I keep falling more and more every single day❤️</p>
 
           <VideoWithPoster 
-            videoSrc="https://drive.google.com/uc?id=1wjV_zm-YSrb8Mxbm0N_9koSNvv8o5meI&export=download" 
+            videoSrc="https://drive.google.com/uc?id=1hepU5elSGZH_-FS8-asNoBiAQ79g0gbE&export=download"
             posterSrc="/images/poster-1.jpeg"
             title="Confession video"
           />
