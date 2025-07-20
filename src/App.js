@@ -401,7 +401,7 @@ const memories = [
           <p>Ennala epovume un mela love ah thavara ethayume kaata mudiyathu pa. I am in love with you. I keep falling more and more every single day❤️</p>
 
           <VideoWithPoster 
-            videoSrc="https://drive.google.com/uc?id=1hepU5elSGZH_-FS8-asNoBiAQ79g0gbE&export=download"
+            videoSrc="https://drive.google.com/uc?id=1zxb4h1TRI0TBHv6XbxTR1vQoh2H0kcFn&export=download"
             posterSrc="/images/poster-1.jpeg"
             title="Confession video"
           />
