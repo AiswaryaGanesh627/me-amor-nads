@@ -410,8 +410,35 @@ const memories = [
             Ennoda Best friend ah, enaku doubts varapo ennoda mentor ah, na vizharapo ena thangi pudikra soulmate ah,
             na sogama irukrapo ena sirika vekra ennoda happy pill ah, ennoda stress buster ah, enaku problem nu varapo atha handle panra ennoda guardian ah,
             ennoda life ah share pannikra life partner ah, enoda boyfriend ah, ennoda husband ah, ennoda kids ku appa va nee irukanum nu aasa padren pa.
-            <br/>Irupiya pa?
-            <span className="signature">With lots of kadhal,<br />Aiswarya ❤️</span>
+            <br/>Irupiya pa?💞
+          </p>
+        </div>
+    ),
+    images: []
+  },
+  {
+    id: 'one-year-anniversary',
+    title: 'Happy First Year Anniversary, Pa❤️',
+    content: (
+        <div className="birthday-content confession">
+          <p>11 Sept 2024🌹<br/> Oru varshathiku munnadi unaku na propose panapo endha alavu love oda irundheno, atha vida pala madangu kadhal oda ipo na iruken🩷</p>
+          <p>Indha one year la unakaga na santhosha patruken, dukka patruken, thumba patruken, kova patruken, irritate aayiruken, frustrate aayiruken, azhudhiruken, kathariruken ellame pannirken️ 😂</p>
+          <p>But ellathavidayum una romba romba love panniren pa.</p>
+          <VideoWithPoster
+              videoSrc="https://drive.google.com/uc?id=1zRZS-lWG2Bp-ALXrieSj9zpTSD2OF5t0&export=download"
+              posterSrc="/images/poster-3.jpeg"
+              title="One year video"
+          />
+
+          <p className="birthday-message">
+            En life la indha one year neraya kathu kuduthiruku. Ennala life la oruthara ivlo love panna mudiyum nu
+            paathathe un kita than.
+            Indha one year was not easy, but I loved every moment of it. En life la best moments na, athu un kooda
+            irundha tharunangal than😘
+            I am grateful for having you in my life. Una vida enaku ethum important ah padathu. I am glad I fell in love
+            with you, Nadraj️ ❤️
+            <br/>Happy one year anniversary of my love for you, pa❤️
+            <span className="signature">With lots of kadhal,<br/>Aiswarya ❤️</span>
           </p>
         </div>
     ),
