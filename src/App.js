@@ -443,6 +443,63 @@ const memories = [
         </div>
     ),
     images: []
+  },
+  {
+    id: 'happy-new-year',
+    title: 'Happy 2026, Nadarajaaa! ❤️',
+    content: (
+        <>
+          <p>2025... Indha varsham full ah oru naal vidama na un kooda travel pannirken pa. Ovvoru naalum unnoda ninaivugaloda arambichu athey ninaivugalodathan mudinjiruku❤️</p>
+          <p>Indha varsham na unna pathiyum enna pathiyum neraya kathukiten. Life la neraya things ah first time experience pannen unnala ❣️</p>
+          <p>Ennoda first bike ride, first cafe date, first time comfort zone ah vitu veliya vandhu explore pannathu and ennoda first trip and new friends😂 Ithellame enaku unnala than kedachuthu pa.</p>
+          <p>Ennoda parvaila ne panra nalla vishayangal naala ne romba uyarndhita pa. 916 hallmark gold nee🤌❤️ Un mela evlo love iruko athey alavu maryadhaiyum vandhiruchu pa</p>
+          <p>I am very proud of you. Unna love panratha nenachu na romba perumai padren 💞 Indha varsham mattum illa, ini vara ella varshamum un kooda spend pannanum nu aasa padren pa.</p>
+          <p>I love you, Nadrajaaa❤️</p>
+        </>
+    ),    images: [
+      {
+        url: '/images/year-1.jpeg',
+        alt: 'Person looking at distance',
+        rotation: 1,
+        caption: 'Namma first date ❤️'
+      },
+      {
+        url: '/images/year-2.jpeg',
+        alt: 'Clock',
+        rotation: -3,
+        caption: 'Innum neraya dates ❤️'
+      },
+      {
+        url: '/images/year-3.jpeg',
+        alt: 'Hopeful',
+        rotation: 2,
+        caption: 'Unnoda first Gold ❤️'
+      },
+      {
+        url: '/images/year-4.jpeg',
+        alt: 'Sunsets',
+        rotation: 7,
+        caption: 'Namma first trip❤️',
+        xOffset: 20,
+        yOffset: -15
+      },
+      {
+        url: '/images/year-5.jpeg',
+        alt: 'Laughter',
+        rotation: -2,
+        caption: 'Trip la neraya selfies❤️',
+        xOffset: -15,
+        yOffset: 10
+      },
+      {
+        url: '/images/year-6.jpeg',
+        alt: 'Laughter',
+        rotation: -2,
+        caption: 'Ne vangi kudutha dress ❤️',
+        xOffset: -15,
+        yOffset: 10
+      }
+    ]
   }
 ];
 
